@@ -18,7 +18,7 @@
 
   <style scoped>
   #footer {
-    height: 200px;
+    height: 100px;
     background-color: #222;
     border-top: 4px solid #111;
     color: #fcba03;
@@ -26,5 +26,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    /* position: absolute; */
+	  bottom: 0;
   }
   </style>
