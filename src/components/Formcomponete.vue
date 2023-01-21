@@ -50,9 +50,31 @@
   
   export default {
     name: 'FormComponente',
-    components: {
-      
-  }
+    components: {},
+    data(){
+      return{
+        paes: null,
+        carnes: null,
+        opcionaisData: null,
+        nome: null,
+        pao: null,
+        carne: null,
+        opcionais: [],
+        status: "Solicitado",
+        msg: null,
+      }
+    },
+    methods:{
+      async getIngredientes(){
+        const req = await fetch("http://localhost:3000/status");
+        const data = await req.json();
+
+        console.log(data);
+      }
+    },
+    mounted(){
+      this.getIngredientes()
+    }
   }
   </script>
 
