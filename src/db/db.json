@@ -1,6 +1,8 @@
 {
-  "ingredientes": {
-    "paes": [
+  "ingredientes": 
+  {
+    "paes": 
+    [
       {
         "id": 1,
         "tipo": "Italiano Branco"
@@ -18,7 +20,8 @@
         "tipo": "Integral"
       }
     ],
-    "carnes": [
+    "carnes": 
+    [
       {
         "id": 1,
         "tipo": "Maminha"
@@ -36,7 +39,8 @@
         "tipo": "Veggie burger"
       }
     ],
-    "opcionais": [
+    "opcionais": 
+    [
       {
         "id": 1,
         "tipo": "Bacon"
@@ -63,7 +67,8 @@
       }
     ]
   },
-  "status": [
+  "status": 
+  [
     {
       "id": 1,
       "tipo": "Solicitado"
@@ -77,7 +82,8 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
+  "burgers": 
+  [
     {
       "nome": "Matheus Battisti",
       "carne": "Picanha",
