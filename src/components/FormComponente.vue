@@ -11,7 +11,7 @@
                     <label for="pao">Escolha o pão:</label>
                     <select id="pao" name="pao" v-model="pao">
                     <option value="">Selecione o seu pão</option>
-                    <option value="Integral">Integral</option>
+                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{pao.tipo}}</option>
                     </select>
                 </div>
                 <div class="input-container">
@@ -69,7 +69,10 @@
         const req = await fetch("http://localhost:3000/ingredientes");
         const data = await req.json();
 
-        console.log(data);
+        this.paes = data.paes;
+        this.carnes = data.carnes;
+        this.opcionaisData = data.opcionais;
+        
       }
     },
     mounted(){
