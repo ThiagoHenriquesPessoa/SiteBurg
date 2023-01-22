@@ -1,8 +1,6 @@
 {
-  "ingredientes": 
-  {
-    "paes": 
-    [
+  "ingredientes": {
+    "paes": [
       {
         "id": 1,
         "tipo": "Italiano Branco"
@@ -20,8 +18,7 @@
         "tipo": "Integral"
       }
     ],
-    "carnes": 
-    [
+    "carnes": [
       {
         "id": 1,
         "tipo": "Maminha"
@@ -39,8 +36,7 @@
         "tipo": "Veggie burger"
       }
     ],
-    "opcionais": 
-    [
+    "opcionais": [
       {
         "id": 1,
         "tipo": "Bacon"
@@ -67,8 +63,7 @@
       }
     ]
   },
-  "status": 
-  [
+  "status": [
     {
       "id": 1,
       "tipo": "Solicitado"
@@ -82,27 +77,57 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": 
-  [
+  "burgers": [
     {
-      "nome": "Matheus Battisti",
-      "carne": "Picanha",
+      "nome": "Thiago Henriques",
+      "carne": "Maminha",
       "pao": "Italiano Branco",
-      "opcionais": [
+      "opicionais": [
         "Bacon",
         "Salame",
-        "Cebola roxa"
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate",
+        "Pepino"
       ],
-      "status": "Finalizado",
+      "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "João Coelho",
+      "nome": "Thiago Henriques",
       "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
+      "pao": "Italiano Branco",
+      "opicionais": [
+        "Bacon",
         "Salame",
-        "Cebola roxa"
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "INTENSIVÃO REVALIDA",
+      "carne": "Veggie burger",
+      "pao": "Parmesão e Orégano",
+      "opicionais": [
+        "Bacon",
+        "Salame",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "TESTE DESENV",
+      "carne": "Alcatra",
+      "pao": "Italiano Branco",
+      "opicionais": [
+        "Cheddar",
+        "Tomate",
+        "Pepino"
       ],
       "status": "Solicitado",
       "id": 4
