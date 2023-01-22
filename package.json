@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "backend": "json-server --watch db.json"
+    "backend": "json-server --watch db/db.json"
   },
   "dependencies": {
     "core-js": "^3.8.3",
