@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <MessageComponente :msg="msg" v-show="msg" />
-    <div>
+  <div>    
+    <div v-if="msg"><MessageComponente :msg="msg" v-show="msg" /></div>
+    <div v-else>  
       <form id="burger-form" @submit="createBurger">
         <div class="input-container">
           <label for="nome">Nome do cliente:</label>
