@@ -82,7 +82,7 @@
       "nome": "Thiago Henriques",
       "carne": "Maminha",
       "pao": "Italiano Branco",
-      "opicionais": [
+      "opcionais": [
         "Bacon",
         "Salame",
         "Cebola roxa",
@@ -97,7 +97,7 @@
       "nome": "Thiago Henriques",
       "carne": "Maminha",
       "pao": "Italiano Branco",
-      "opicionais": [
+      "opcionais": [
         "Bacon",
         "Salame",
         "Cebola roxa",
@@ -112,7 +112,7 @@
       "nome": "INTENSIVÃO REVALIDA",
       "carne": "Veggie burger",
       "pao": "Parmesão e Orégano",
-      "opicionais": [
+      "opcionais": [
         "Bacon",
         "Salame",
         "Pepino"
@@ -124,7 +124,7 @@
       "nome": "TESTE DESENV",
       "carne": "Alcatra",
       "pao": "Italiano Branco",
-      "opicionais": [
+      "opcionais": [
         "Cheddar",
         "Tomate",
         "Pepino"
@@ -136,7 +136,7 @@
       "nome": "LETICIA FERREIRA SEVERO HALULI ASFORA",
       "carne": "Alcatra",
       "pao": "3 Queijos",
-      "opicionais": [
+      "opcionais": [
         "Bacon",
         "Tomate",
         "Cebola roxa"
@@ -148,13 +148,26 @@
       "nome": "No Papo",
       "carne": "Maminha",
       "pao": "Parmesão e Orégano",
-      "opicionais": [
+      "opcionais": [
         "Cheddar",
         "Pepino",
         "Salame"
       ],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "nome": "Thiago Pessoa",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }
