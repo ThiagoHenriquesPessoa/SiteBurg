@@ -102,7 +102,7 @@
         "Tomate",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 4
     },
     {
@@ -114,7 +114,7 @@
         "Tomate",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 5
     },
     {
@@ -126,7 +126,7 @@
         "Pepino",
         "Salame"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 6
     },
     {
@@ -139,7 +139,7 @@
         "Cebola roxa",
         "Cheddar"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 7
     }
   ]
