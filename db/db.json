@@ -102,6 +102,7 @@
         "Tomate",
         "Pepino"
       ],
+      "status": "Finalizado",
       "status": "Em produção",
       "id": 4
     },
@@ -139,6 +140,7 @@
         "Cebola roxa",
         "Cheddar"
       ],
+      "status": "Em produção",
       "status": "Finalizado",
       "id": 7
     }
