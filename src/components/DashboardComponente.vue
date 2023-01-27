@@ -1,5 +1,6 @@
 <template>
     <div id="burger-table">
+        <MessageComponente :msg="msg" v-show="msg" />
         <div>
             <div id="burger-table-heading">
                 <div class="order-id">#:</div>
@@ -19,7 +20,7 @@
                 <div>
                     <ul>
                         <li v-for="(opcional, index) in burger.opcionais" :key="index">
-                            {{opcional}}
+                            {{ opcional }}
                         </li>
                     </ul>
                 </div>
@@ -27,7 +28,7 @@
                     <select name="status" class="status" @change="updateBurger($event, burger.id)">
                         <option value="">Selecione</option>
                         <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">
-                            {{s.tipo}}                        
+                            {{ s.tipo }}
                         </option>"
                     </select>
                     <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
@@ -38,17 +39,22 @@
 </template>
 
 <script>
+import MessageComponente from './MessageComponente.vue';
 export default {
     name: 'DashboardComponente',
-    data(){
-        return{
+    components: {
+        MessageComponente
+    },
+    data() {
+        return {
             burgers: null,
             burger_id: null,
-            status: []
+            status: [],
+            msg: null
         }
     },
-    methods:{
-        async getpedidos(){
+    methods: {
+        async getpedidos() {
             const req = await fetch("http://localhost:3000/burgers");
             const data = await req.json();
             this.burgers = data;
@@ -56,55 +62,68 @@ export default {
             console.log(this.burgers);
 
             //resgatar os status
-            this.getStatus();        
+            this.getStatus();
         },
-        async getStatus(){
+        async getStatus() {
             const req = await fetch("http://localhost:3000/status");
             const data = await req.json();
             this.status = data;
 
             console.log(this.status);
         },
-        async deleteBurger(id){
-            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+        async deleteBurger(id) {
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
                 method: "DELETE"
             });
+
             const data = await req.json();
+
+
+            //Colocar uma mensagemde sistema
+            this.msg = `Pedido removido com sucesso!`;
+
+            setTimeout(() => this.msg = "", 3000)
+
+
             this.getpedidos();
         },
-        async updateBurger(event, id){
+        async updateBurger(event, id) {
             const option = event.target.value;
-            const datJson = JSON.stringify({status: option});
-            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+            const datJson = JSON.stringify({ status: option });
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
                 method: "PATCH",
-                headers: {"Content-Type": "application/json"},
+                headers: { "Content-Type": "application/json" },
                 body: datJson
             });
 
             const res = await req.json();
-            console.log(res);
+
+            //Colocar uma mensagemde sistema
+            this.msg = `O pedido N° ${res.id} foi atualizado para ${res.status}!`;
+
+            setTimeout(() => this.msg = "", 3000)
         }
     },
-    mounted(){
+    mounted() {
         this.getpedidos();
     }
 }
 </script>
 
 <style scoped>
-#burger-table{
+#burger-table {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 #burger-table-heading,
 #burger-table-rows,
-.burger-table-row{
+.burger-table-row {
     display: flex;
     flex-wrap: wrap;
 }
 
-#burger-table-heading{
+#burger-table-heading {
     font-weight: bold;
     padding: 12px;
     border-bottom: 3px solid #333;
@@ -123,14 +142,15 @@ export default {
 
 #burger-table-heading .order-id,
 .burger-table-row .order-number {
-width: 5%;
+    width: 5%;
 }
 
 select {
     padding: 12px 6px;
     margin-right: 12px;
 }
-.delete-btn{
+
+.delete-btn {
     background-color: #222;
     color: #fcba03;
     font-weight: bold;
@@ -142,7 +162,7 @@ select {
     transition: .5s;
 }
 
-.delete-btn:hover{
+.delete-btn:hover {
     background-color: transparent;
     color: #222;
 }

@@ -79,21 +79,6 @@
   ],
   "burgers": [
     {
-      "nome": "Thiago Henriques",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa",
-        "Cheddar",
-        "Tomate",
-        "Pepino"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
       "nome": "TESTE DESENV",
       "carne": "Alcatra",
       "pao": "Italiano Branco",
@@ -102,7 +87,7 @@
         "Tomate",
         "Pepino"
       ],
-      "status": "Em produção",
+      "status": "Finalizado",
       "id": 4
     },
     {
@@ -114,7 +99,7 @@
         "Tomate",
         "Cebola roxa"
       ],
-      "status": "Em produção",
+      "status": "Solicitado",
       "id": 5
     },
     {
@@ -139,7 +124,7 @@
         "Cebola roxa",
         "Cheddar"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 7
     }
   ]
