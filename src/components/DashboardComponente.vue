@@ -71,6 +71,7 @@ export default {
             });
             const data = await req.json();
             this.getpedidos();
+
         },
         async updateBurger(event, id){
             const option = event.target.value;
@@ -83,6 +84,7 @@ export default {
 
             const res = await req.json();
             console.log(res);
+
         }
     },
     mounted(){
