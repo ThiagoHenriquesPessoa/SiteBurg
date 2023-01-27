@@ -29,6 +29,7 @@
                         <option value="">Selecione</option>
                         <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">
                             {{ s.tipo }}
+                            {{s.tipo}}                        
                         </option>"
                     </select>
                     <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
@@ -93,6 +94,20 @@ export default {
             const req = await fetch(`http://localhost:3000/burgers/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
+        async deleteBurger(id){
+            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+                method: "DELETE"
+            });
+            const data = await req.json();
+            this.getpedidos();
+
+        },
+        async updateBurger(event, id){
+            const option = event.target.value;
+            const datJson = JSON.stringify({status: option});
+            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
                 body: datJson
             });
 
@@ -102,6 +117,7 @@ export default {
             this.msg = `O pedido N° ${res.id} foi atualizado para ${res.status}!`;
 
             setTimeout(() => this.msg = "", 3000)
+            console.log(res);
         }
     },
     mounted() {
